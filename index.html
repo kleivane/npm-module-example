@@ -1,6 +1,18 @@
 <html>
+<meta charset='UTF-8'>
 <title>NPM frontendmodules</title>
+<script type="text/javascript" src="node_modules/lodash/index.js"></script>
+<script type="text/javascript" src="node_modules/npm-module-part/index.js"></script>
 <body>
-Eksempeloppsett for pakker
+<h2>Er det helg nå?</h2>
+<span class="idag"></span>
 </body>
+<script type="text/javascript">
+	var svar = 'Nei';
+	const erHelg = _.first(document.querySelectorAll('.idag'));
+	if(new Date().erHelg()){
+		svar = 'Ja';
+	}
+	erHelg.textContent = svar;
+</script>
 </html>

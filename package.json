@@ -9,6 +9,7 @@
   "author": "kleivane",
   "license": "MIT",
   "dependencies": {
-    "lodash": "3.10.1"
+    "lodash": "3.10.1",
+    "npm-module-part": "git://github.com/kleivane/npm-module-part.git"
   }
 }
