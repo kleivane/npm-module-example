@@ -5,14 +5,15 @@
 <script type="text/javascript" src="node_modules/npm-module-part/index.js"></script>
 <body>
 <h2>Er det helg nå?</h2>
-<span class="idag"></span>
+<span class="idag"></span>	
 </body>
 <script type="text/javascript">
-	var svar = 'Nei';
-	const erHelg = _.first(document.querySelectorAll('.idag'));
-	if(new Date().erHelg()){
-		svar = 'Ja';
-	}
-	erHelg.textContent = svar;
+
+	function erHelg(dag){
+		return dag.erHelg() ? 'Ja' : 'Nei'
+	};
+	
+	const iDagEl = _.first(document.querySelectorAll('.idag'));
+	iDagEl.textContent = erHelg(new Date());
 </script>
 </html>
